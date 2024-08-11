@@ -1,4 +1,4 @@
-name: Python CI
+name: 3D Modeler CI
 
 on: [push, pull_request]
 
@@ -21,9 +21,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install OpenGL Dependencies
+      run: |
+        sudo apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-utils
+
     - name: Install xvfb
       run: sudo apt-get install -y xvfb
-
-    - name: Run PyOpenGL Test
+        
+    - name: Run PyOpenGL Test with Mesa
       run: |
-        xvfb-run python test.py
+          xvfb-run -a --server-args="-screen 0 1024x768x24" python script.py
+
