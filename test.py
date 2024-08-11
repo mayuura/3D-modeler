@@ -6,14 +6,27 @@ Created on Thu Aug  8 21:40:26 2024
 """
 
 from OpenGL.GL import (
-    glClearColor, glColor3f, glPointSize, glClear, 
-    glBegin, glVertex2f, glEnd, glFlush, GL_COLOR_BUFFER_BIT, 
-    GL_POINTS
+    glClearColor,
+    glColor3f,
+    glPointSize,
+    glClear,
+    glBegin,
+    glVertex2f,
+    glEnd,
+    glFlush,
+    GL_COLOR_BUFFER_BIT,
+    GL_POINTS,
 )
 from OpenGL.GLUT import (
-    glutInit, glutInitDisplayMode, glutInitWindowSize, 
-    glutInitWindowPosition, glutCreateWindow, glutDisplayFunc, 
-    glutMainLoop, GLUT_SINGLE, GLUT_RGB
+    glutInit,
+    glutInitDisplayMode,
+    glutInitWindowSize,
+    glutInitWindowPosition,
+    glutCreateWindow,
+    glutDisplayFunc,
+    glutMainLoop,
+    GLUT_SINGLE,
+    GLUT_RGB,
 )
 from OpenGL.GLU import gluOrtho2D
 
