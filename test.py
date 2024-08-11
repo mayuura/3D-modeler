@@ -4,7 +4,7 @@ Created on Thu Aug  8 21:40:26 2024
 
 @author: El Mehdi
 """
-
+import time
 from OpenGL.GL import (
     glClearColor,
     glColor3f,
@@ -24,6 +24,8 @@ from OpenGL.GLUT import (
     glutInitWindowPosition,
     glutCreateWindow,
     glutDisplayFunc,
+    glutTimerFunc,
+    glutLeaveMainLoop,
     glutMainLoop,
     GLUT_SINGLE,
     GLUT_RGB,
@@ -48,6 +50,8 @@ def display():
 
     glFlush()
 
+def close_window(timer_id):
+    glutLeaveMainLoop()
 
 glutInit()
 glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
@@ -56,4 +60,5 @@ glutInitWindowPosition(100, 100)
 glutCreateWindow("Test window")
 myInit()
 glutDisplayFunc(display)
+glutTimerFunc(4000, close_window, 0)
 glutMainLoop()
