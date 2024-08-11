@@ -26,4 +26,4 @@ jobs:
 
     - name: Run PyOpenGL Test
       run: |
-        xvfb-run python script.py
+        xvfb-run python test.py
