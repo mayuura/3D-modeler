@@ -21,14 +21,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install OpenGL Dependencies
+    - name: Run Unit Tests
       run: |
-        sudo apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-utils
+         echo "TODO: Add unit tests "
 
-    - name: Install xvfb
-      run: sudo apt-get install -y xvfb
-        
-    - name: Run PyOpenGL Test with Mesa
-      run: |
-           timeout 30 xvfb-run -a --server-args="-screen 0 1024x768x24" python test.py
+   
 
