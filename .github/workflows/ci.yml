@@ -23,7 +23,7 @@ jobs:
 
     - name: Run tests
       run: |
-        # Replace with your test framework (e.g., pytest)
+        # Create test classes
         echo "No tests specified"
 
     - name: Lint code with flake8
